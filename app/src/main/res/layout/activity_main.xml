@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:text="EMOTIONS DETECTION"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/logo"
+
+
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="405dp"
+            android:layout_height="706dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.495">
+
+            <ImageView
+                android:id="@+id/showimg"
+                android:layout_width="match_parent"
+                android:layout_height="471dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="227dp" />
+
+
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/chart1"
+                android:layout_width="364dp"
+                android:layout_height="187dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginBottom="28dp"
+                tools:ignore="MissingClass" />
+
+            <ImageView
+                android:id="@+id/charthelp"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="10dp"
+                android:alpha="0.5"
+                app:srcCompat="@drawable/help"
+                tools:ignore="MissingClass" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/cameravideo"
+            android:layout_width="57dp"
+            android:layout_height="54dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="212dp"
+            android:layout_marginBottom="8dp"
+            android:text="camera"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/video_camera1"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/btnpicture"
+            android:layout_width="57dp"
+            android:layout_height="47dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:text="Take picture"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.378"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/picture" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
